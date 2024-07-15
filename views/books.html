@@ -34,7 +34,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       const booksList = document.getElementById('books-list');
 
-      fetch('/api/books')
+      fetch('/book/api/books')
         .then(response => response.json())
         .then(books => {
           books.forEach(book => {

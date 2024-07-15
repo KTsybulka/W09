@@ -26,8 +26,16 @@ db.on("error", (err) => {
 
 // Use book router for routes starting with /book
 const bookRouter = require("./routes/book_router");
-app.use("/", bookRouter);
+// app.use("/", bookRouter);
+app.use("/book", bookRouter); 
 
+app.get('/', (req, res) => {
+  res.send('Got it');
+});
+
+// router.get('/books', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../views', 'books.html'));
+// });
 // 404 Route
 app.use((req, res) => {
   res.status(404).send("Route not found");

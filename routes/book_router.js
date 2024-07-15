@@ -5,7 +5,7 @@ const Book = require("../models/book");
 const validateBook = require("../middleware/validation");
 
 // Get all books
-router.get("/api/books", (req, res) => {
+router.get("/books", (req, res) => {
   Book.find({})
     .then((books) => {
       res.json(books);
@@ -67,7 +67,7 @@ router
 router.get('/book/edit/:id', (req, res) => {
   res.sendFile(path.join(__dirname, "../views", "edit-book.html"));
 });
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // Update a book by ID
 router
   .route("/api/book/edit/:id")
