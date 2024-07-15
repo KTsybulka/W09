@@ -18,12 +18,11 @@ let bookSchema = mongoose.Schema(
       type: [String],
       required: true,
     },
-    ratings: {
+    rating: {
       type: Number,
       required: true,
     },
   },
-  { collection: 'books'}
 );
 
-let Book = (module.exports = mongoose.model("books", bookSchema));
+let Book = (module.exports = mongoose.model("book", bookSchema));
